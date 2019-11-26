@@ -4,6 +4,7 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -48,6 +49,14 @@ class MainActivity : AppCompatActivity() {
                 btnBlue.setBackgroundColor(Color.GRAY)
             isBlue = !isBlue
             btnSum.changeMixColor()
+        }
+
+        btnSum.setOnClickListener {
+
+            var loopObj = Loops()
+
+//            var result
+            Toast.makeText(applicationContext,loopObj.getResult(), Toast.LENGTH_SHORT).show()
         }
 
     }
